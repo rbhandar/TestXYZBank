@@ -95,6 +95,7 @@ describe('XYZ Bank Bank manager', function () {
     }));
     it("click on Process button to generate account no", () => {
         opAct.clickProcessbutton();
+        console.log("Clickd Process button");
         var alertValidate = protractor_1.browser.switchTo().alert();
         expect(alertValidate.accept).toBeDefined();
         alertValidate.getText().then((text) => {

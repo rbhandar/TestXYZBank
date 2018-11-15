@@ -104,11 +104,13 @@ it('select currency', async ()=> {
 
 it("click on Process button to generate account no", () => { 
     opAct.clickProcessbutton();
+    console.log("Clickd Process button")
     var alertValidate = browser.switchTo().alert();
     expect(alertValidate.accept).toBeDefined();
     alertValidate.getText().then((text) => { 
         console.log(text);
         alertValidate.accept();
+        
     })
     
 });
